@@ -55,7 +55,7 @@ By default, the server will run on `http://localhost:3001` to be compatible with
 ##### Example Request
 
 ```sh
-curl "http://localhost:3000/latex?tex=%5Cfrac%7Ba%7D%7Bb%7D&preamble=%5Cusepackage%7Bamsmath%7D"
+curl "http://localhost:3001/latex?tex=%5Cfrac%7Ba%7D%7Bb%7D&preamble=%5Cusepackage%7Bamsmath%7D"
 ```
 
 ##### Example Response
@@ -67,13 +67,13 @@ The server responds with an SVG image of the compiled LaTeX formula.
 To request the SVG for a simple fraction formula:
 
 ```sh
-curl "http://localhost:3000/latex?tex=%5Cfrac%7B1%7D%7B2%7D"
+curl "http://localhost:3001/latex?tex=%5Cfrac%7B1%7D%7B2%7D"
 ```
 
 If you need to include additional LaTeX packages in the preamble:
 
 ```sh
-curl "http://localhost:3000/latex?tex=%5Cfrac%7B1%7D%7B2%7D&preamble=%5Cusepackage%7Bamsmath%7D"
+curl "http://localhost:3001/latex?tex=%5Cfrac%7B1%7D%7B2%7D&preamble=%5Cusepackage%7Bamsmath%7D"
 ```
 
 This will return an SVG representation of the formula `\frac{1}{2}` with the `amsmath` package included.
