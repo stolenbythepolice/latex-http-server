@@ -1,5 +1,5 @@
 import express from 'express';
-import { Tex2Svg, math, tikz } from "tex2svg";
+import { Tex2Svg, math } from "tex2svg";
 
 const app = express();
 const port = 3001;
@@ -12,7 +12,7 @@ app.get('/latex', async (req, res) => {
         return res.status(400).send('Missing formula parameter');
     }
 
-    const preambleArray = Array.isArray(preamble) ? preamble : preamble ? [preamble] : [];
+    const preambleArray = Array.isArray(preamble) ? preamble : preamble ? preamble.split('\n') : [];
 
     const compiler = new Tex2Svg({
         tmpdir: "/tmp",
