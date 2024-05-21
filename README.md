@@ -21,12 +21,6 @@ To run this server, you need the following installed on your system:
 ## Installation
 
 1. Clone the repository:
-
-```sh
-git clone https://github.com/your-username/latex-http-server.git
-cd latex-http-server
-```
-
 2. Install the required npm packages:
 
 ```sh
@@ -58,10 +52,6 @@ By default, the server will run on `http://localhost:3001` to be compatible with
 curl "http://localhost:3001/latex?tex=%5Cfrac%7Ba%7D%7Bb%7D&preamble=%5Cusepackage%7Bamsmath%7D"
 ```
 
-##### Example Response
-
-The server responds with an SVG image of the compiled LaTeX formula.
-
 ## Example
 
 To request the SVG for a simple fraction formula:
@@ -85,7 +75,3 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 ## Acknowledgements
 
 This project utilizes the [tex2svg](https://www.npmjs.com/package/tex2svg) library for converting LaTeX to SVG.
-
-## Contributing
-
-Contributions are welcome! Please open an issue or submit a pull request on GitHub.
