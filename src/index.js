@@ -1,8 +1,11 @@
 import express from 'express';
+import cors from 'cors';
 import { Tex2Svg, math } from "tex2svg";
 
 const app = express();
 const port = 3001;
+
+app.use(cors());
 
 app.get('/latex', async (req, res) => {
     const formula = req.query.tex;
